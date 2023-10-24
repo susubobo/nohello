@@ -1,0 +1,50 @@
+import java.util.Scanner;
+ class HelloWorld {
+	public static void main(String[] args) {
+			float sUSD,sAUD,sYEN,sGBP,rateUSD,rateAUD,rateYEN,rateGBP,S;
+			int n;
+				rateUSD = 23200;rateAUD=15527;rateYEN =164;rateGBP =29898;
+		Scanner sc = new Scanner(System.in);
+			System.out.println("CONG CU CHUYEN DOI TIEN TE");
+			System.out.println("=========================");
+			System.out.println("-->(1) Chuyen doi VND sang USD");
+			System.out.println("-->(2) Chuyen doi VND sang YEN");
+			System.out.println("-->(3) Chuyen doi VND sang AUD");
+			System.out.println("-->(4) Chuyen doi VND sang GBP");
+			System.out.print("Vui long chon cac gia tri (1), (2), (3), (4): ");
+			n = sc.nextInt();
+  switch (n) {
+    case 1:{
+      System.out.print("Nhap so tien ban muon chuyen doi (VND): ");
+      S = sc.nextFloat();
+      sUSD = S / rateUSD;
+      System.out.println("Voi "+S+" nghin dong ban se doi duoc: "+sUSD+"USD");
+      break;
+    }
+    case 2:{
+      System.out.print("Nhap so tien ban muon chuyen doi (VND): ");
+      S = sc.nextFloat();
+      sYEN = S / rateYEN;
+      System.out.println("Voi "+S+" nghin dong ban se doi duoc: "+sYEN+"YEN");
+      break;
+    }
+    case 3:{
+      System.out.print("Nhap so tien ban muon chuyen doi (VND): ");
+      S = sc.nextFloat();
+      sAUD = S / rateAUD;
+      System.out.println("Voi "+S+" nghin dong ban se doi duoc: "+sAUD+"AUD");
+      break;
+    }
+    case 4:{
+      System.out.print("Nhap so tien ban muon chuyen doi (VND): ");
+      S = sc.nextFloat();
+      sGBP = S / rateGBP;
+      System.out.println("Voi "+S+" nghin dong ban se doi duoc: "+sGBP+"GBP");
+      break;
+    }
+    default:
+      System.out.println("So nhap vao khong hop le vui long nhap lai");
+    }
+	}
+
+}
